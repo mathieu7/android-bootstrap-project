@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:2.2.3'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -16,6 +16,18 @@ allprojects {
     repositories {
         jcenter()
     }
+}
+
+// This block encapsulates custom properties and makes them available to all
+// modules in the project.
+ext {
+    // The following are only a few examples of the types of properties you can define.
+    compileSdkVersion = 25
+    buildToolsVersion = "25.0.1"
+
+    supportLibVersion = "25.1.0"
+    leakCanaryVersion = "1.5"
+    jUnitVersion = "4.12"
 }
 
 task clean(type: Delete) {
